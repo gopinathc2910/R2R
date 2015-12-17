@@ -1,0 +1,18 @@
+<h1>Add Department</h1>
+<p>
+	In this page you can view the departments available and add a new department
+</p>
+<%= form_for :department, url: upload_dept_add_path(:department) do |f| -%>
+<form role="form">
+	<div class="form-group">
+		<label>Department ID</label>
+		<%= f.text_field :dept_id, :class =>"form-control", :id => "dept", :placeholder => "Enter department" %>
+	</div>
+	<div class="form-group">
+		<label>Department</label>
+		<%= f.text_field :dept_name, :class =>"form-control", :id => "dept", :placeholder => "Enter department" %>
+	</div>
+	<br />
+	<%= f.submit "Add" %>
+</form>
+<% end -%>
